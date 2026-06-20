@@ -1,0 +1,572 @@
+/* XD Design Tokens */
+:root {
+  /* Colors */
+  --unnamed-color-705aaa: #705AAA;
+  --unnamed-color-cbc8d4: #CBC8D4;
+  --activestate_bg_2:     #D8FCF7;
+  --activestate_bg_1:     #01F0D0;
+  --unnamed-color-0bd984: #0BD984;
+  --unnamed-color-072635: #072635;
+  --unnamed-color-0c3d5d: #0C3D5D;
+  --unnamed-color-084c77: #084C77;
+  --unnamed-color-055a92: #055A92;
+  --unnamed-color-006aac: #006AAC;
+  --unnamed-color-007bc7: #007BC7;
+  --unnamed-color-707070: #707070;
+  --unnamed-color-f6f6f6: #F6F6F6;
+  --unnamed-color-ededed: #EDEDED;
+  --unnamed-color-000000: #000000;
+  --unnamed-color-878787: #878787;
+  --unnamed-color-ffffff: #FFFFFF;
+  --unnamed-color-ff6200: #FF6200;
+
+  /* Typography */
+  --unnamed-font-family-manrope:    'Manrope', sans-serif;
+  --unnamed-font-style-normal:      normal;
+  --unnamed-font-weight-800:        800;
+  --unnamed-font-weight-normal:     400;
+  --unnamed-font-weight-bold:       700;
+  --unnamed-font-size-14:           14px;
+  --unnamed-font-size-18:           18px;
+  --unnamed-font-size-24:           24px;
+  --unnamed-character-spacing-0:    0px;
+  --unnamed-line-spacing-19:        19px;
+  --unnamed-line-spacing-24:        24px;
+  --unnamed-line-spacing-33:        33px;
+}
+
+/* ─── XD Character Styles ───────────────────────────────────────────────── */
+.card-title-24pt {
+  font-family:    var(--unnamed-font-family-manrope);
+  font-style:     var(--unnamed-font-style-normal);
+  font-weight:    var(--unnamed-font-weight-800);
+  font-size:      var(--unnamed-font-size-24);
+  line-height:    var(--unnamed-line-spacing-33);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color:          var(--unnamed-color-072635);
+}
+.inner-card-title-18pt {
+  font-family:    var(--unnamed-font-family-manrope);
+  font-style:     var(--unnamed-font-style-normal);
+  font-weight:    var(--unnamed-font-weight-bold);
+  font-size:      var(--unnamed-font-size-18);
+  line-height:    var(--unnamed-line-spacing-24);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color:          var(--unnamed-color-072635);
+}
+.body-emphasized-14pt {
+  font-family:    var(--unnamed-font-family-manrope);
+  font-style:     var(--unnamed-font-style-normal);
+  font-weight:    var(--unnamed-font-weight-bold);
+  font-size:      var(--unnamed-font-size-14);
+  line-height:    var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color:          var(--unnamed-color-072635);
+}
+.body-secondary-info-14pt {
+  font-family:    var(--unnamed-font-family-manrope);
+  font-style:     var(--unnamed-font-style-normal);
+  font-weight:    var(--unnamed-font-weight-normal);
+  font-size:      var(--unnamed-font-size-14);
+  line-height:    var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color:          var(--unnamed-color-707070);
+}
+.body-regular-14 {
+  font-family:    var(--unnamed-font-family-manrope);
+  font-style:     var(--unnamed-font-style-normal);
+  font-weight:    var(--unnamed-font-weight-normal);
+  font-size:      var(--unnamed-font-size-14);
+  line-height:    var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color:          var(--unnamed-color-072635);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-14);
+  color:       var(--unnamed-color-072635);
+  background:  var(--unnamed-color-f6f6f6);
+}
+
+/* ─── App Shell ─────────────────────────────────────────────────────────── */
+.app-wrapper {
+  display:        flex;
+  flex-direction: column;
+  height:         100vh;
+  overflow:       hidden;
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────── */
+.top-header {
+  display:         flex;
+  flex-direction:  row;
+  align-items:     center;
+  justify-content: space-between;
+  flex-shrink:     0;
+  background:      var(--unnamed-color-ffffff);
+  padding:         14px 40px;
+  border-bottom:   1px solid var(--unnamed-color-ededed);
+  box-shadow:      0 2px 4px rgba(7,38,53,.06);
+  height:          72px;
+}
+
+.header-left { flex: 0 0 auto; }
+
+.logo {
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+  font-family: var(--unnamed-font-family-manrope);
+  font-weight: var(--unnamed-font-weight-800);
+  font-size:   var(--unnamed-font-size-18);
+  color:       var(--unnamed-color-072635);
+}
+.logo-icon { font-size: 22px; }
+
+.header-center {
+  flex:            1;
+  display:         flex;
+  justify-content: center;
+}
+
+.nav-tabs {
+  display: flex;
+  gap:     8px;
+}
+
+.nav-tab {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  cursor:      pointer;
+  padding:     8px 20px;
+  border-radius: 41px;
+  color:       var(--unnamed-color-072635);
+  white-space: nowrap;
+  transition:  background 0.2s;
+}
+.nav-tab.active { background: var(--activestate_bg_1); }
+
+.header-right {
+  flex:        0 0 auto;
+  display:     flex;
+  align-items: center;
+  gap:         16px;
+}
+
+.user-profile {
+  display:     flex;
+  align-items: center;
+  gap:         12px;
+}
+.user-profile img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+
+.user-name {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  color:       var(--unnamed-color-072635);
+}
+.user-role {
+  font-size: 12px;
+  color:     var(--unnamed-color-707070);
+}
+
+.settings-icon { font-size: 20px; cursor: pointer; }
+
+/* ─── 3-Column Grid ─────────────────────────────────────────────────────── */
+.main-layout {
+  display:               grid;
+  grid-template-columns: 252px 1fr 280px;
+  gap:                   20px;
+  padding:               20px;
+  flex:                  1 1 0;
+  min-height:            0;
+  overflow:              hidden;
+}
+
+/* ─── Left Sidebar ──────────────────────────────────────────────────────── */
+.patients-sidebar {
+  background:    var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  display:       flex;
+  flex-direction:column;
+  min-height:    0;
+  overflow:      hidden;
+  box-shadow:    0 2px 8px rgba(7,38,53,.06);
+}
+
+.sidebar-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  padding:         20px 20px 12px;
+  flex-shrink:     0;
+}
+.sidebar-header h2 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-18);
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+}
+.search-icon { font-size: 16px; cursor: pointer; }
+
+.patients-list {
+  display:        flex;
+  flex-direction: column;
+  overflow-y:     auto;
+  flex:           1;
+}
+
+.patient-item {
+  display:     flex;
+  align-items: center;
+  gap:         12px;
+  padding:     10px 20px;
+  cursor:      pointer;
+  border-left: 3px solid transparent;
+  transition:  background 0.15s;
+  flex-shrink: 0;
+}
+.patient-item:hover { background: var(--unnamed-color-f6f6f6); }
+.patient-item.active {
+  background:        var(--activestate_bg_2);
+  border-left-color: var(--activestate_bg_1);
+}
+
+.patient-avatar {
+  width:         40px;
+  height:        40px;
+  border-radius: 50%;
+  background:    linear-gradient(135deg, var(--unnamed-color-007bc7), var(--unnamed-color-006aac));
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  color:         var(--unnamed-color-ffffff);
+  font-weight:   var(--unnamed-font-weight-800);
+  font-size:     13px;
+  flex-shrink:   0;
+}
+.patient-avatar-img {
+  width:         40px;
+  height:        40px;
+  border-radius: 50%;
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.patient-item-details { flex: 1; min-width: 0; }
+.patient-item-name {
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  color:       var(--unnamed-color-072635);
+  white-space: nowrap;
+  overflow:    hidden;
+  text-overflow: ellipsis;
+}
+.patient-item-meta { font-size: 13px; color: var(--unnamed-color-707070); margin-top: 2px; }
+.patient-menu { font-size: 18px; cursor: pointer; color: var(--unnamed-color-072635); flex-shrink: 0; }
+
+/* ─── Center: Main Content ──────────────────────────────────────────────── */
+.main-content {
+  background:    var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding:       24px;
+  overflow-y:    auto;
+  min-height:    0;
+  box-shadow:    0 2px 8px rgba(7,38,53,.06);
+}
+
+.patient-header-card {
+  display:       flex;
+  gap:           16px;
+  align-items:   flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--unnamed-color-ededed);
+}
+
+.patient-avatar-large {
+  width:           80px;
+  height:          80px;
+  border-radius:   10px;
+  background:      linear-gradient(135deg, var(--unnamed-color-007bc7), var(--unnamed-color-006aac));
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           var(--unnamed-color-ffffff);
+  font-weight:     var(--unnamed-font-weight-800);
+  font-size:       var(--unnamed-font-size-24);
+  flex-shrink:     0;
+}
+
+.patient-header-info h1 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-24);
+  font-weight: var(--unnamed-font-weight-800);
+  line-height: var(--unnamed-line-spacing-33);
+  color:       var(--unnamed-color-072635);
+  margin-bottom: 4px;
+}
+.patient-header-info p {
+  font-size: var(--unnamed-font-size-14);
+  color:     var(--unnamed-color-707070);
+}
+
+/* Diagnosis Section */
+.diagnosis-section h2 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-18);
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+  margin-bottom: 16px;
+}
+
+/* BP Chart Card */
+.chart-card {
+  background:    #F4F0FE;
+  border-radius: 12px;
+  padding:       20px;
+  margin-bottom: 20px;
+}
+.chart-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  margin-bottom:   16px;
+}
+.chart-header h3 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-18);
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+}
+.chart-select {
+  padding:       6px 12px;
+  border:        1px solid var(--unnamed-color-ededed);
+  border-radius: 8px;
+  font-family:   var(--unnamed-font-family-manrope);
+  font-size:     var(--unnamed-font-size-14);
+  background:    var(--unnamed-color-ffffff);
+  color:         var(--unnamed-color-072635);
+  cursor:        pointer;
+}
+.chart-wrapper {
+  display:               grid;
+  grid-template-columns: 1fr 160px;
+  gap:                   16px;
+  align-items:           center;
+}
+.chart-col { position: relative; height: 180px; }
+
+.chart-legend { display: flex; flex-direction: column; gap: 24px; }
+.legend-item  { display: flex; gap: 8px; align-items: flex-start; }
+.legend-dot {
+  width:        10px;
+  height:       10px;
+  border-radius: 50%;
+  flex-shrink:  0;
+  margin-top:   5px;
+}
+.legend-item.systolic  .legend-dot { background: #E66FD2; }
+.legend-item.diastolic .legend-dot { background: #8C6FE6; }
+
+.legend-label {
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  color:       var(--unnamed-color-072635);
+  margin-bottom: 2px;
+}
+.legend-value {
+  font-size:   var(--unnamed-font-size-24);
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.legend-status { font-size: 13px; }
+.systolic-status  { color: #E66FD2; }
+.diastolic-status { color: #8C6FE6; }
+
+/* Vitals */
+.vitals-grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   16px;
+  margin-bottom:         20px;
+}
+.vital-card { padding: 20px 16px; border-radius: 12px; }
+.vital-card.respiratory { background: #E8F8FB; }
+.vital-card.temperature { background: #FFE8EC; }
+.vital-card.heart-rate  { background: #FFE8EC; }
+
+.vital-icon { font-size: 36px; margin-bottom: 10px; }
+.vital-card h4 {
+  font-size:     var(--unnamed-font-size-14);
+  font-weight:   var(--unnamed-font-weight-bold);
+  color:         var(--unnamed-color-072635);
+  margin-bottom: 8px;
+}
+.vital-value {
+  font-size:   22px;
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+}
+.vital-status {
+  font-size: var(--unnamed-font-size-14);
+  color:     var(--unnamed-color-072635);
+}
+.vital-note {
+  font-size:  var(--unnamed-font-size-14);
+  color:      var(--unnamed-color-707070);
+  margin-top: 4px;
+}
+
+/* Diagnostic List */
+.diagnostic-list { margin-top: 8px; }
+.diagnostic-list h3 {
+  font-family:   var(--unnamed-font-family-manrope);
+  font-size:     var(--unnamed-font-size-18);
+  font-weight:   var(--unnamed-font-weight-800);
+  color:         var(--unnamed-color-072635);
+  margin-bottom: 12px;
+}
+.diagnostic-list table { width: 100%; border-collapse: collapse; }
+.diagnostic-list thead { background: var(--unnamed-color-f6f6f6); border-radius: 8px; }
+.diagnostic-list th {
+  padding:     12px 16px;
+  text-align:  left;
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  color:       var(--unnamed-color-072635);
+}
+.diagnostic-list td {
+  padding:     12px 16px;
+  border-bottom: 1px solid var(--unnamed-color-ededed);
+  font-size:   var(--unnamed-font-size-14);
+  color:       var(--unnamed-color-072635);
+}
+
+.status-badge {
+  display:       inline-block;
+  padding:       4px 12px;
+  border-radius: 20px;
+  font-size:     12px;
+  font-weight:   var(--unnamed-font-weight-bold);
+  white-space:   nowrap;
+}
+.status-badge.under-observation { background: rgba(12,61,93,.12);   color: var(--unnamed-color-0c3d5d); }
+.status-badge.cured             { background: rgba(11,217,132,.15);  color: #0a9b5c; }
+.status-badge.inactive          { background: rgba(255,98,0,.12);    color: var(--unnamed-color-ff6200); }
+
+/* ─── Right Sidebar ─────────────────────────────────────────────────────── */
+.info-sidebar {
+  display:        flex;
+  flex-direction: column;
+  gap:            16px;
+  overflow-y:     auto;
+  min-height:     0;
+}
+
+.info-card {
+  background:    var(--unnamed-color-ffffff);
+  border-radius: 16px;
+  padding:       20px;
+  box-shadow:    0 2px 8px rgba(7,38,53,.06);
+}
+
+.patient-photo-container { display: flex; justify-content: center; margin-bottom: 12px; }
+.patient-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+
+.patient-info-name {
+  font-family:   var(--unnamed-font-family-manrope);
+  font-size:     var(--unnamed-font-size-24);
+  font-weight:   var(--unnamed-font-weight-800);
+  color:         var(--unnamed-color-072635);
+  text-align:    center;
+  margin-bottom: 20px;
+}
+
+.info-card-header { margin-bottom: 12px; }
+.info-card-header h3 {
+  font-family: var(--unnamed-font-family-manrope);
+  font-size:   var(--unnamed-font-size-18);
+  font-weight: var(--unnamed-font-weight-800);
+  color:       var(--unnamed-color-072635);
+}
+
+.info-item { display: flex; gap: 12px; margin-bottom: 16px; align-items: flex-start; }
+.info-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.info-label {
+  display:       block;
+  font-size:     var(--unnamed-font-size-14);
+  font-weight:   var(--unnamed-font-weight-normal);
+  color:         var(--unnamed-color-707070);
+  margin-bottom: 2px;
+}
+.info-value {
+  display:     block;
+  font-size:   var(--unnamed-font-size-14);
+  font-weight: var(--unnamed-font-weight-bold);
+  color:       var(--unnamed-color-072635);
+}
+
+.btn-show-all {
+  display:       block;
+  width:         100%;
+  margin-top:    8px;
+  padding:       10px;
+  background:    var(--activestate_bg_1);
+  border:        none;
+  border-radius: 41px;
+  font-family:   var(--unnamed-font-family-manrope);
+  font-size:     var(--unnamed-font-size-14);
+  font-weight:   var(--unnamed-font-weight-bold);
+  color:         var(--unnamed-color-072635);
+  cursor:        pointer;
+  transition:    opacity 0.2s;
+}
+.btn-show-all:hover { opacity: 0.85; }
+
+/* Lab Results */
+.lab-result-item {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  padding:         12px 0;
+  border-bottom:   1px solid var(--unnamed-color-ededed);
+}
+.lab-result-item:last-child { border-bottom: none; }
+.lab-name {
+  font-size:   var(--unnamed-font-size-14);
+  color:       var(--unnamed-color-072635);
+}
+.lab-icon { font-size: 16px; cursor: pointer; }
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--unnamed-color-ededed); border-radius: 4px; }
+
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .main-layout { grid-template-columns: 220px 1fr 260px; }
+}
+@media (max-width: 768px) {
+  .app-wrapper { height: auto; overflow: visible; }
+  .main-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+  .vitals-grid { grid-template-columns: 1fr; }
+  .chart-wrapper { grid-template-columns: 1fr; }
+}
