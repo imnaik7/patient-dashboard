@@ -24,6 +24,7 @@
       .patients-list { display: flex !important; flex-direction: column !important; overflow-y: auto; flex: 1; }
       .main-content { background: #fff; border-radius: 16px; padding: 24px; overflow-y: auto; min-height: 0; box-shadow: 0 2px 8px rgba(7,38,53,.06); }
       .info-sidebar { display: flex !important; flex-direction: column !important; gap: 16px; overflow-y: auto; min-height: 0; }
+      @media (max-width: 768px) { .main-content, .info-sidebar { display: none; } .main-content.detail-visible { display: block !important; } .info-sidebar.detail-visible { display: flex !important; } }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
@@ -69,6 +70,7 @@
 
         <!-- Center: Main Content -->
         <main class="main-content">
+          <button class="back-btn" id="backBtn">&#8592; Back to Patients</button>
           <div class="patient-header-card">
             <div class="patient-avatar-large" id="patientAvatarLarge">JT</div>
             <div class="patient-header-info">
